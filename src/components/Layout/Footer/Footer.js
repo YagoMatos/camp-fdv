@@ -3,7 +3,7 @@ import React from 'react';
 import Title from '../../Typography/Title/Title';
 import Text from '../../Typography/Text/Text';
 
-import SocialButton from '../../UI/Button/SocialButton//SocialButton';
+import SocialButton from '../../UI/Buttons/SocialButton//SocialButton';
 
 const footer = props => {
   return (
