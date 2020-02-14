@@ -2,6 +2,9 @@ import React from 'react'
 
 import Title from '../../../Typography/Title/Title';
 import Text from '../../../Typography/Text/Text';
+import Button from '../../Buttons/Button/Button';
+
+import './FullCard.css';
 
 const fullCard = props => {
   return (
@@ -9,7 +12,7 @@ const fullCard = props => {
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
         <img
           alt="..."
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+          src={props.image}
           className="w-full align-middle rounded-t-lg"
         />
         <blockquote className="relative p-8 mb-4">
@@ -19,8 +22,8 @@ const fullCard = props => {
             viewBox="0 0 583 95"
             className="absolute left-0 w-full block"
             style={{
-              height: "95px",
-              top: "-94px"
+              height: '95px',
+              top: '-94px'
             }}>
             <polygon
               points="-30,95 583,95 583,65"
@@ -28,12 +31,17 @@ const fullCard = props => {
             </polygon>
           </svg>
           <Title size="xl" color="white">
-            {props.title}
+            <strong>{props.title}</strong>
           </Title>
           
           <Text size="md" color="white">
             {props.description}
           </Text>
+          <div className="py-5">
+            <Button link={props.link}>
+              {props.btnLink}
+            </Button>
+          </div>
         </blockquote>
       </div>
     </div>

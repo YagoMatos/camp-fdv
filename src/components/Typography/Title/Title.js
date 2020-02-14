@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './Title.css'
 const title = props => {
   return (
-    <h4 className={`text-${props.size} font-bold text-${props.color}`}>
+    <h4 className={`text-${props.size} text-${props.color}`}>
       {props.children}
     </h4>
   )

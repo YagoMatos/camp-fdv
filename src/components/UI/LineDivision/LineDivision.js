@@ -1,10 +1,11 @@
 import React from 'react';
+import './LineDivision.css';
 
 const lineDivision = props => {
   return (
     <div
       className={`top-${props.top} bottom-${props.bottom} left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20`}
-      style={{ height: "80px", transform: "translateZ(0)" }}>
+      style={{ height: '80px', transform: 'translateZ(0)' }}>
     <svg
       className="absolute bottom-0 overflow-hidden"
       xmlns="http://www.w3.org/2000/svg"

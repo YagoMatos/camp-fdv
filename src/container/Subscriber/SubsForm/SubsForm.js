@@ -5,6 +5,7 @@ import Title from '../../../components/Typography/Title/Title';
 import Text from '../../../components/Typography/Text/Text';
 import Label from '../../../components/Typography/Label/Label';
 import Button from '../../../components/UI/Buttons/Button/Button';
+import Submit from '../../../components/UI/Buttons/Submit/Submit';
 import Modal from '../../../components/UI/Modal/Modal';
 import './SubsForm.css';
 
@@ -61,7 +62,7 @@ const SubsForm = props => {
   }
 
   return (
-    <div className="relative block py-24 lg:pt-0 bg-gray-900">
+    <div className="relative block py-24 lg:pt-0 bg-black-3">
       { open && !err ? <Modal success feedback="success" onClose={clear}>Inscrição realizada com sucesso!</Modal> 
         :
        open && err && <Modal feedback="error" onClose={clear}>Desculpe, não foi possível te cadastrar. Tente mais tarde!</Modal> 
@@ -69,18 +70,18 @@ const SubsForm = props => {
       <div className="container mx-auto px-4 pt-20">
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-8/12 px-4">
-            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-200">
               <div className="flex-auto justify-center p-5 lg:p-10">
                 <div className="text-position">
-                  <Title size="2xl">Se você JÁ ESTÁ inscrito e deseja apenas pagar online no Cartão:</Title>
+                  <Title color="black" size="2xl">Se você <strong>JÁ ESTÁ</strong> inscrito e deseja apenas pagar online no Cartão:</Title>
                   <div className="py-5">
                     <Button link={'https://pag.ae/7VJU96fS5'}>Pague Aqui!</Button>
                   </div>
                   <div className="py-10">
-                      <Text> OU </Text>
+                      <Text color="black"> OU </Text>
                   </div>  
                   <div className="pt-15">
-                      <Title size="2xl">Se você AINDA NÃO está inscrito: </Title>
+                      <Title color="black" size="2xl">Se você <strong>AINDA NÃO</strong> está inscrito: </Title>
                   </div>
                 </div>
                 
@@ -238,7 +239,7 @@ const SubsForm = props => {
                     </div>
                     
                     <div className="text-center mt-6">
-                      <Button>ENVIAR</Button>
+                      <Submit>ENVIAR</Submit>
                     </div>
                   </form>
                 </div>

@@ -19,7 +19,7 @@ import ImageCard from '../../../UI/Cards/ImageCard/ImageCard';
           <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div className="md:pr-12">
               <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
-                <i className="fas fa-rocket text-xl"></i>
+                <i className="fas fa-pen text-xl"></i>
               </div>
               <Title size="3xl">Observações</Title>
 

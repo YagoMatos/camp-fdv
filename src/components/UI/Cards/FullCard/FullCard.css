@@ -1,0 +1,5 @@
+blockquote.relative.p-8.mb-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
