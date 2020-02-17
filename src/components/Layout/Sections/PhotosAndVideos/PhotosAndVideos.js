@@ -23,7 +23,13 @@ const PhotosAndVideos = () => {
             <div className="w-full lg:w-6/12 px-4">
               <Title size="3xl">Videos & Fotos</Title>
               <div className="py-10">
-                <Button onClick={handleClick}>Confira Aqui!</Button>
+                <Button
+                  variant="outlined"
+                  color="primary" 
+                  size="large" 
+                  onClick={handleClick}>
+                    Confira Aqui!
+                </Button>
                 <Carousel
                   isMobile={matches}
                   handleOpen={handleOpen}
