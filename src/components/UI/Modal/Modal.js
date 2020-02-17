@@ -7,7 +7,7 @@ import './Modal.css';
 const Modal = react.memo(props => {
   let payment = '';
   let message = ''
-  if (props.method !== 'Cartao') {
+  if (props.method === 'Cartao') {
     payment = (
       <div className="credit">
         <p className="desc-credit">Finalize agora seu Pagamento!</p>

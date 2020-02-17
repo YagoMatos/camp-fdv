@@ -7,6 +7,8 @@ import Label from '../../../components/Typography/Label/Label';
 import Button from '../../../components/UI/Buttons/Button/Button';
 import Submit from '../../../components/UI/Buttons/Submit/Submit';
 import Modal from '../../../components/UI/Modal/Modal';
+import LoadingIndicator from '../../../components/UI/LoadingIndicator/LoadingIndicator';
+
 import './SubsForm.css';
 
 const SubsForm = props => {
@@ -14,6 +16,7 @@ const SubsForm = props => {
   const { register, handleSubmit, errors, reset } = useForm()
   const [open, setOpen] = useState(false)
   const [err, setErr] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [payMethod, setMethod] = useState('')
   const onSubmit = (data, event) => {
     event.target.reset();
@@ -25,6 +28,8 @@ const SubsForm = props => {
   };
 
   const firebase = useCallback((data, dataPlanilha) => {
+    setLoading(true)
+
     fetch('https://camp-fdv.firebaseio.com/participantes.json', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -34,9 +39,11 @@ const SubsForm = props => {
     }).then(response => {
       return response.json()
     }).then(responseData => {
+      setLoading(false)
       setOpen(true);
       planilha(dataPlanilha)
     }).catch(err => {
+      setLoading(false)
       setErr(true)
       setOpen(true)
     });
@@ -266,8 +273,9 @@ const SubsForm = props => {
                       </div>
                     </div>
                     
-                    <div className="text-center mt-6">
+                    <div className="text-center mt-6 flex">
                       <Submit>ENVIAR</Submit>
+                      {loading && <LoadingIndicator/>}
                     </div>
                   </form>
                 </div>
