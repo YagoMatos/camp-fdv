@@ -4,6 +4,8 @@ import Title from '../../components/Typography/Title/Title';
 import Text from '../../components/Typography/Text/Text';
 import SubsForm from './SubsForm/SubsForm';
 
+import './Subscriber.css';
+
 const Subscriber = () => {
   return (
     <section className="pb-20 relative block bg-black-3">
@@ -34,7 +36,7 @@ const Subscriber = () => {
               após a inscrição, entraremos em contato para informar os próximos passos.
             </Text>
           </div>
-          <div className="w-full lg:w-3/12 px-4 text-center">
+          <div className="w-full lg:w-3/12 px-4 text-center mobile-pay">
             <div className="text-black p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
               <i className="fas fa-poll text-xl"></i>
             </div>

@@ -14,11 +14,13 @@ const SubsForm = props => {
   const { register, handleSubmit, errors, reset } = useForm()
   const [open, setOpen] = useState(false)
   const [err, setErr] = useState(false)
+  const [payMethod, setMethod] = useState('')
   const onSubmit = (data, event) => {
     event.target.reset();
     //data = 'Yago Janu, Catia Matos';
-    const dataPlanilha = (Object.values(data)).join(', ')
+    setMethod(data.Pagamento)
 
+    const dataPlanilha = (Object.values(data)).join(', ')
     firebase(data, dataPlanilha)
   };
 
@@ -40,7 +42,7 @@ const SubsForm = props => {
     });
   }, []);
 
-  const planilha = useCallback((data) => {
+  const planilha = (data) => {
     fetch('https://us-central1-camp-fdv.cloudfunctions.net/httpPlanilha', {
       method: 'POST',
       mode: 'no-cors', // 'cors' by default
@@ -51,10 +53,11 @@ const SubsForm = props => {
     }).then(response => {
       return response.json()
     }).then(res => {
-      res.send('ok')
-    }).catch(err => { 
+      console.log('ok')
+    }).catch(err => {
+      console.log('bad') 
     });
-  }, [])
+  }
 
   const clear = () => {
     setOpen(false)
@@ -63,9 +66,23 @@ const SubsForm = props => {
 
   return (
     <div className="relative block py-24 lg:pt-0 bg-black-3">
-      { open && !err ? <Modal success feedback="success" onClose={clear}>Inscrição realizada com sucesso!</Modal> 
-        :
-       open && err && <Modal feedback="error" onClose={clear}>Desculpe, não foi possível te cadastrar. Tente mais tarde!</Modal> 
+      { open && !err ? (
+        <Modal 
+          success 
+          feedback="success" 
+          method={payMethod} 
+          onClose={clear}>
+            Inscrição realizada com sucesso!
+        </Modal> 
+        ) :
+        open && err && (
+        <Modal 
+          feedback="error" 
+          method={payMethod} 
+          onClose={clear}>
+            Desculpe, não foi possível te cadastrar. Tente mais tarde!
+        </Modal>
+        ) 
       }
       <div className="container mx-auto px-4 pt-20">
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
@@ -114,13 +131,24 @@ const SubsForm = props => {
                       {errors.Email && <p className="error">Campo Email não deve estar vazio!</p>}
                     </div>
 
-                    <div className="relative w-full mb-3">
-                      <Label>Nome do Responsável (menor de 18 anos)</Label>  
-                      <input type="text" placeholder="Nome do Responsável" name="Responsavel" ref={register({
-                        required: true, min: 4, maxLength: 255, validate: value => value !== '',
-                        })} />
-                      {errors.Responsavel && <p className="error">Campo Responsavel não deve estar vazio! Se você tiver mais que 18 anos, pode colocar o seu próprio nome!</p>}
-                    </div>
+                    <div className="column">
+                      <div className="relative x-60 mb-3">
+                        <Label>Nome do Responsável (menor de 18 anos)</Label>  
+                        <input type="text" placeholder="Nome do Responsável" name="Responsavel" ref={register({
+                          required: true, min: 4, maxLength: 255, validate: value => value !== '',
+                          })} />
+                        {errors.Responsavel && <p className="error">Campo Responsavel não deve estar vazio! Se você tiver mais que 18 anos, pode colocar o seu próprio nome!</p>}
+                      </div>
+                      <div className="relative x-30 mb-3">                     
+                        <Label>Forma de Pagamento</Label>
+                        <select name="Pagamento" ref={register({ required: true, validate: value => value !== '' })}>
+                          <option value=""></option>
+                          <option value="Cartao">Cartão (Credito/Débito)</option>
+                          <option value="Boleto">Boleto</option>
+                        </select>                    
+                        {errors.Pagamento && <p className="error">Campo Form. de Pagamento não deve estar vazio! Escolha uma opção!</p>}
+                      </div>   
+                    </div>           
                     
                     <div className="column">
                       <div className="relative x-45 mb-3">

@@ -44,7 +44,7 @@ const information = () => {
 
 
             <div className="flex flex-wrap items-center mt-32">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mb-bw-card">
                 <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-100">
                   <i className="fas fa-info text-xl"></i>
                 </div>

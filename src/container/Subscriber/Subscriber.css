@@ -28,3 +28,10 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+@media only screen and (max-width: 767px) {
+  .mobile-pay{
+    margin-top: 2em;
+  }
+}

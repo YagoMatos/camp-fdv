@@ -15,7 +15,9 @@ const footer = () => {
             <div className="w-full lg:w-6/12 px-4">
               <Title color="white" size="3xl">Siga-nos nas Redes Sociais</Title>
               <div className="mt-6">
-                <SocialButton social="facebook" />
+                <SocialButton 
+                  link="https://pt-br.facebook.com/fdvmja" 
+                  social="facebook" />
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">

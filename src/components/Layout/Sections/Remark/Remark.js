@@ -6,6 +6,8 @@ import Topics from '../../../UI/Topics/Topics';
 import LineDivision from '../../../UI/LineDivision/LineDivision';
 import ImageCard from '../../../UI/Cards/ImageCard/ImageCard';
 
+import './Remark.css';
+
  const Remark = () => {
   return (
     <section className="relative py-20">
@@ -16,7 +18,7 @@ import ImageCard from '../../../UI/Cards/ImageCard/ImageCard';
           <ImageCard 
             url="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
           />
-          <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+          <div className="w-full md:w-5/12 ml-auto mr-auto px-4 mt-bw-card">
             <div className="md:pr-12">
               <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
                 <i className="fas fa-pen text-xl"></i>
