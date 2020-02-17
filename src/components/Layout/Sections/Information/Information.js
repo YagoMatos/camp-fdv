@@ -60,11 +60,11 @@ const information = () => {
                     Local de Saida: R. Ricardo Gonçalves, 295, Vila Bocaina - Mauá - SP
                   </Text>
                   <Text color="white">
-                    Idade Mínima de 13 anos
+                    Idade Mínima de 12 anos
                   </Text>
                   <Text color="white">
                     Valor: R$ 280,00 (Em até 8x de R$ 37,00 começando em Março até Outubro). 
-                    Caso comece a pagar de Abril em diante, o número de parcelas possíveis vai diminuindo como passar dos meses.
+                    Caso comece a pagar de Abril em diante, o número de parcelas possíveis diminuirá com o passar dos meses.
                   </Text>
                 </Topics>
               </div>

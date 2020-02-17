@@ -27,13 +27,13 @@ import './Remark.css';
 
               <Topics>
                 <Text color="gray-600">
-                  Após inscrição a organização entrará em contato por email, whatsapp, telefone ou pessoalmente.
+                  Após a inscrição, a organização entrará em contato por email, whatsapp, telefone ou pessoalmente.
                 </Text>
                 <Text color="gray-600">
                   Em caso de desistência, será cobrado ou retido um valor (a ser negociado).
                 </Text>
                 <Text color="gray-600">
-                  Próximo a data do evento será agendado um Pré-Acampa, com detalhes do evento.
+                  Próximo a data do evento, será agendado um Pré-Acampa, para informar maiores detalhes do evento como, cronograma, regras, etc.
                 </Text>
               </Topics>
             </div>
