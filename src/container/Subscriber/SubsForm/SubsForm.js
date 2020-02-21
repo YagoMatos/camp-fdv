@@ -11,7 +11,7 @@ import LoadingIndicator from '../../../components/UI/LoadingIndicator/LoadingInd
 
 import './SubsForm.css';
 
-const SubsForm = props => {
+const SubsForm = () => {
   // eslint-disable-next-line no-unused-vars
   const { register, handleSubmit, errors, reset } = useForm()
   const [open, setOpen] = useState(false)

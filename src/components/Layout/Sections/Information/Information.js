@@ -63,8 +63,10 @@ const information = () => {
                     Idade Mínima de 12 anos
                   </Text>
                   <Text color="white">
-                    Valor: R$ 280,00 (Em até 8x de R$ 37,00 começando em Março até Outubro). 
-                    Caso comece a pagar de Abril em diante, o número de parcelas possíveis diminuirá com o passar dos meses.
+                    Valor: R$ 280,00 (Em até 9x no Cartão ou em 8x no boleto). 
+                  </Text>
+                  <Text color="white">
+                    Este valor já é incluso a hospedagem + todas as refeições diárias + lanches.
                   </Text>
                 </Topics>
               </div>

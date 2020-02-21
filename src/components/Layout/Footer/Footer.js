@@ -2,6 +2,7 @@ import React from 'react';
 
 import Title from '../../Typography/Title/Title';
 import Text from '../../Typography/Text/Text';
+import Button from '../../UI/Buttons/Button/Button';
 
 import SocialButton from '../../UI/Buttons/SocialButton//SocialButton';
 
@@ -16,31 +17,42 @@ const footer = () => {
               <Title color="white" size="3xl">Siga-nos nas Redes Sociais</Title>
               <div className="mt-6">
                 <SocialButton 
+                  color="blue-600"
                   link="https://pt-br.facebook.com/fdvmja" 
                   social="facebook" />
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
+                <div className="w-full lg:w-6/12 px-4 ml-auto">
                   <span className="block uppercase text-white text-sm font-semibold mb-2">
-                    Contatos
+                    Dúvidas? Contate-nos por email ou whatsapp!
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <Text color="white" bold size="sm">acampamento@iprmaua.com.br</Text>
                     </li>
                     <li>
-                      <Text color="white" bold size="sm">(11) 4541-5600</Text>
+                      <Button link="https://web.whatsapp.com/send?phone=5511953834774&text=" color="white" bold size="sm">
+                        (11) 95383-4774
+                        <SocialButton 
+                          color="green-600"
+                          link="" 
+                          social="whatsapp" />
+                        </Button>
                     </li>
                     <li>
-                      <Text color="white" bold size="sm">(11) 94455-6191</Text>
-                    </li>
-                    <li>
-                      <Text color="white" bold size="sm">(11) 98790-0505</Text>
+                      <Button link="https://web.whatsapp.com/send?phone=5511948185762&text=" color="white" bold size="sm">
+                        (11) 94818-5762
+                        <SocialButton 
+                          color="green-600"
+                          link="" 
+                          social="whatsapp" />
+                      </Button>
                     </li>
                   </ul>
                 </div>
+             
               </div>
             </div>
           </div>

@@ -3158,6 +3158,13 @@ img {
   }
 }
 
+a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
 @media (min-width: 1280px) {
 
   .xl\:mb-0 {
