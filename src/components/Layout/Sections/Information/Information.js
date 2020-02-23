@@ -63,7 +63,7 @@ const information = () => {
                     Idade Mínima de 12 anos
                   </Text>
                   <Text color="white">
-                    Valor: R$ 280,00 (Em até 9x no Cartão ou em 8x no boleto). 
+                    Valor: R$ 280,00 (Em até 12x de R$ 28,11 no Cartão ou em 8x de R$ 35,00 no boleto). 
                   </Text>
                   <Text color="white">
                     Este valor já é incluso a hospedagem + todas as refeições diárias + lanches.

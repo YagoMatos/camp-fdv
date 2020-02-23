@@ -33,7 +33,7 @@ const footer = () => {
                       <Text color="white" bold size="sm">acampamento@iprmaua.com.br</Text>
                     </li>
                     <li>
-                      <Button link="https://web.whatsapp.com/send?phone=5511953834774&text=" color="white" bold size="sm">
+                      <Button link="https://wa.me/5511953834774" color="white" bold size="sm">
                         (11) 95383-4774
                         <SocialButton 
                           color="green-600"
@@ -42,7 +42,7 @@ const footer = () => {
                         </Button>
                     </li>
                     <li>
-                      <Button link="https://web.whatsapp.com/send?phone=5511948185762&text=" color="white" bold size="sm">
+                      <Button link="https://wa.me/5511948185762" color="white" bold size="sm">
                         (11) 94818-5762
                         <SocialButton 
                           color="green-600"
